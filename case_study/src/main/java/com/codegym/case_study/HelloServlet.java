@@ -1,4 +1,4 @@
-package com.codegym.case;
+package com.codegym.case_study;
 
 import java.io.*;
 import javax.servlet.http.*;
