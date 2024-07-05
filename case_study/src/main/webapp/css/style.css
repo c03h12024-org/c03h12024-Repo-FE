@@ -207,3 +207,17 @@ input {
     border: none;
     cursor: pointer;
 }
+
+.d-inline-block {
+    display: inline-block!important;
+}
+
+.day {
+    border: 2px solid #fdfcf0;
+    border-radius: 5px;
+    color: #717171;
+    cursor: pointer;
+    height: 48px;
+    position: relative;
+    width: 77px;
+}

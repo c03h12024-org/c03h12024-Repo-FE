@@ -1,18 +1,4 @@
-let seats = document.querySelector(".all-seats");
-for (var i = 0; i < 59; i++) {
-    let randint = Math.floor(Math.random() * 2);
-    let booked = randint === 1 ? "booked" : "";
-    seats.insertAdjacentHTML(
-        "beforeend",
-        '<input type="checkbox" name="tickets" id="s' +
-        (i) +
-        '" /><label for="s' +
-        (i) +
-        '" class="seat ' +
-        booked +
-        '"></label>'
-    );
-}
+
 
 let tickets = seats.querySelectorAll("input");
 tickets.forEach((ticket) => {
