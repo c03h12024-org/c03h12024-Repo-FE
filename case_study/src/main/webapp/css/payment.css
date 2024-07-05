@@ -90,7 +90,7 @@ nav a :first-child {
 .rightbox {
     float: right;
     width: 60%;
-    height: 100%;
+    height: 120%;
 }
 
 .profile,
@@ -118,6 +118,7 @@ h2 {
     font-size: 14px;
     letter-spacing: 1px;
     margin-left: 2px;
+    margin-top: -2px;
 }
 
 p {
@@ -202,7 +203,7 @@ footer a:hover {
     font-weight: 400;
     color: #ececec;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 .btn:hover {
     background: rgba(7, 1, 1, 0.67);
@@ -223,7 +224,7 @@ footer a:hover {
     font-weight: 400;
     color: #ececec;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 5px;
     margin-left: 15px;
 }
 
