@@ -2,7 +2,6 @@ package com.codegym.case_study.controllers;
 
 import com.codegym.case_study.models.Showtime;
 import com.codegym.case_study.models.ShowtimeTicket;
-import com.codegym.case_study.models.Ticket;
 import com.codegym.case_study.services.ShowtimeService;
 
 import javax.servlet.ServletException;
@@ -11,8 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.Date;
-import java.util.Arrays;
 import java.util.List;
 
 @WebServlet(name = "MainController", urlPatterns = "/movie")
