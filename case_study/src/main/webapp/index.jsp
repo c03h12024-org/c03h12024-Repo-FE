@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,129 +53,61 @@
 </div>
 <!-- END NAV -->
 
-<!-- HERO SECTION -->
+
 <div class="hero-section">
-  <!-- HERO SLIDE -->
   <div class="hero-slide">
     <div class="owl-carousel carousel-nav-center" id="hero-carousel">
-      <!-- SLIDE ITEM -->
+      <c:forEach var="movie" items="${movies}">
       <div class="hero-slide-item">
-        <img src="images/black-banner.png" alt="">
-        <div class="overlay"></div>
-        <div class="hero-slide-item-content">
-          <div class="item-content-wraper">
-            <div class="item-content-title top-down">
-              Black Panther
-            </div>
-            <div class="movie-infos top-down delay-2">
-              <div class="movie-info">
-                <i class="bx bxs-star"></i>
-                <span>9.5</span>
+          <img src="${movie.image}" alt="">
+          <div class="overlay"></div>
+          <div class="hero-slide-item-content">
+            <div class="item-content-wraper">
+              <div class="item-content-title top-down">
+                  ${movie.title}
               </div>
-              <div class="movie-info">
-                <i class="bx bxs-time"></i>
-                <span>120 mins</span>
+              <div class="movie-infos top-down delay-2">
+                <div class="movie-info">
+                  <i class="bx bxs-star"></i>
+                  <span>${movie.star}</span>
+                </div>
+                <div class="movie-info">
+                  <i class="bx bxs-time"></i>
+                  <span>${movie.duration} mins</span>
+                </div>
+                <div class="movie-info">
+                  <span>${movie.quality}</span>
+                </div>
+                <div class="movie-info">
+                  <span>${movie.age_limit}</span>
+                </div>
               </div>
-              <div class="movie-info">
-                <span>HD</span>
+              <div class="item-content-description top-down delay-4">
+                      ${movie.description}
               </div>
-              <div class="movie-info">
-                <span>16+</span>
+              <div class="item-action top-down delay-6">
+                <a href="order.jsp" class="btn btn-hover">
+                  <i class="bx bxs-right-arrow"></i>
+                  <span>Book now</span>
+                </a>
               </div>
-            </div>
-            <div class="item-content-description top-down delay-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, possimus eius. Deserunt non odit, cum vero reprehenderit laudantium odio vitae autem quam, incidunt molestias ratione mollitia accusantium, facere ab suscipit.
-            </div>
-            <div class="item-action top-down delay-6">
-              <a href="order.jsp" class="btn btn-hover">
-                <i class="bx bxs-right-arrow"></i>
-                <span>Watch now</span>
-              </a>
+              <div class="item-action top-down delay-6">
+                <a href="order.jsp" class="btn btn-hover">
+                  <i class="bx bxs-right-arrow"></i>
+                  <span>Trailer</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- END SLIDE ITEM -->
-      <!-- SLIDE ITEM -->
-      <div class="hero-slide-item">
-        <img src="images/supergirl-banner.jpg" alt="">
-        <div class="overlay"></div>
-        <div class="hero-slide-item-content">
-          <div class="item-content-wraper">
-            <div class="item-content-title top-down">
-              Supergirl
-            </div>
-            <div class="movie-infos top-down delay-2">
-              <div class="movie-info">
-                <i class="bx bxs-star"></i>
-                <span>9.5</span>
-              </div>
-              <div class="movie-info">
-                <i class="bx bxs-time"></i>
-                <span>120 mins</span>
-              </div>
-              <div class="movie-info">
-                <span>HD</span>
-              </div>
-              <div class="movie-info">
-                <span>16+</span>
-              </div>
-            </div>
-            <div class="item-content-description top-down delay-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, possimus eius. Deserunt non odit, cum vero reprehenderit laudantium odio vitae autem quam, incidunt molestias ratione mollitia accusantium, facere ab suscipit.
-            </div>
-            <div class="item-action top-down delay-6">
-              <a href="order.jsp" class="btn btn-hover">
-                <i class="bx bxs-right-arrow"></i>
-                <span>Watch now</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- END SLIDE ITEM -->
-      <!-- SLIDE ITEM -->
-      <div class="hero-slide-item">
-        <img src="images/wanda-banner.jpg" alt="">
-        <div class="overlay"></div>
-        <div class="hero-slide-item-content">
-          <div class="item-content-wraper">
-            <div class="item-content-title top-down">
-              Wanda Vision
-            </div>
-            <div class="movie-infos top-down delay-2">
-              <div class="movie-info">
-                <i class="bx bxs-star"></i>
-                <span>9.5</span>
-              </div>
-              <div class="movie-info">
-                <i class="bx bxs-time"></i>
-                <span>120 mins</span>
-              </div>
-              <div class="movie-info">
-                <span>HD</span>
-              </div>
-              <div class="movie-info">
-                <span>16+</span>
-              </div>
-            </div>
-            <div class="item-content-description top-down delay-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, possimus eius. Deserunt non odit, cum vero reprehenderit laudantium odio vitae autem quam, incidunt molestias ratione mollitia accusantium, facere ab suscipit.
-            </div>
-            <div class="item-action top-down delay-6">
-              <a href="order.jsp" class="btn btn-hover">
-                <i class="bx bxs-right-arrow"></i>
-                <span>Watch now</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- END SLIDE ITEM -->
+      </c:forEach>
     </div>
   </div>
+</div>
+
   <!-- END HERO SLIDE -->
   <!-- TOP MOVIES SLIDE -->
+<div style="clear: both">
   <div class="top-movies-slide">
     <div class="owl-carousel" id="top-movies-slide">
       <!-- MOVIE ITEM -->
